@@ -75,26 +75,26 @@
                         <phase>generate-resources</phase>
                         <configuration>
                             <target name="prepare-compile-js-closure">
-                                <taskdef resource="net/sf/antcontrib/antlib.xml" classpathref="maven.plugin.classpath" />
+                                <taskdef resource="net/sf/antcontrib/antlib.xml" classpathref="maven.plugin.classpath"/>
                                 <if>
                                     <not>
-                                        <available file="${basedir}/target/compiler.jar" />
+                                        <available file="${basedir}/target/compiler.jar"/>
                                     </not>
                                     <then>
-                                        <get src="${closure-compiler-url}" dest="${basedir}/target" />
+                                        <get src="${closure-compiler-url}" dest="${basedir}/target"/>
                                         <unzip src="${basedir}/target/${closure-compiler-zip}" dest="${basedir}/target/">
                                             <patternset>
-                                                <include name="*.jar" />
+                                                <include name="*.jar"/>
                                             </patternset>
                                         </unzip>
                                     </then>
                                 </if>
                                 <if>
                                     <not>
-                                        <available file="${basedir}/target/closure-library/" />
+                                        <available file="${basedir}/target/closure-library/"/>
                                     </not>
                                     <then>
-                                        <get src="${closure-library-url}" dest="${basedir}/target" />
+                                        <get src="${closure-library-url}" dest="${basedir}/target"/>
                                         <unzip src="${basedir}/target/${closure-library-zip}" dest="${basedir}/target/closure-library">
                                         </unzip>
                                     </then>
@@ -330,7 +330,7 @@
     </dependencies>
 
     <properties>
-        <proctor.version>1.1.0</proctor.version>
+        <proctor.version>1.7.0</proctor.version>
         <indeed-util.version>1.0.12</indeed-util.version>
         <closure-library.version>0.0-20130212-95c19e7f0f5f</closure-library.version>
         <closure-library-zip>closure-library-20130212-95c19e7f0f5f.zip</closure-library-zip>
