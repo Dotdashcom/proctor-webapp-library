@@ -75,26 +75,26 @@
                         <phase>generate-resources</phase>
                         <configuration>
                             <target name="prepare-compile-js-closure">
-                                <taskdef resource="net/sf/antcontrib/antlib.xml" classpathref="maven.plugin.classpath" />
+                                <taskdef resource="net/sf/antcontrib/antlib.xml" classpathref="maven.plugin.classpath"/>
                                 <if>
                                     <not>
-                                        <available file="${basedir}/target/compiler.jar" />
+                                        <available file="${basedir}/target/compiler.jar"/>
                                     </not>
                                     <then>
-                                        <get src="${closure-compiler-url}" dest="${basedir}/target" />
+                                        <get src="${closure-compiler-url}" dest="${basedir}/target"/>
                                         <unzip src="${basedir}/target/${closure-compiler-zip}" dest="${basedir}/target/">
                                             <patternset>
-                                                <include name="*.jar" />
+                                                <include name="*.jar"/>
                                             </patternset>
                                         </unzip>
                                     </then>
                                 </if>
                                 <if>
                                     <not>
-                                        <available file="${basedir}/target/closure-library/" />
+                                        <available file="${basedir}/target/closure-library/"/>
                                     </not>
                                     <then>
-                                        <get src="${closure-library-url}" dest="${basedir}/target" />
+                                        <get src="${closure-library-url}" dest="${basedir}/target"/>
                                         <unzip src="${basedir}/target/${closure-library-zip}" dest="${basedir}/target/closure-library">
                                         </unzip>
                                     </then>
@@ -309,7 +309,7 @@
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-core</artifactId>
-            <version>2.5.2</version>
+            <version>2.18.6</version>
         </dependency>
         <dependency>
             <groupId>com.google.guava</groupId>
